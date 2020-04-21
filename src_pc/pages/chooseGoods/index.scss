@@ -1,0 +1,88 @@
+.chooseGoods {
+    overflow: hidden;
+    width: 1243px;
+    height: 1079px;
+    background: rgba(255, 255, 255, 1);
+}
+.title {
+    margin-left: 24px;
+    width: 80px;
+    height: 62px;
+    font-size: 20px;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: rgba(51, 51, 51, 1);
+    line-height: 62px;
+}
+.showContent {
+    display: block;
+}
+.hiddenContent {
+    display: none;
+}
+.tableContainer {
+    width: 1243px;
+    height: 898px;
+    background-color: rgba(247, 248, 250, 1);
+}
+.dropdown {
+    height: 78px;
+}
+
+.select {
+    display: flex;
+    margin: 0 24px;
+}
+.select .keyWord {
+    margin-right: 0;
+    width: 110px;
+}
+.select .input {
+    margin-top: -24px;
+    width: 249px;
+}
+.select .searchBtn {
+    margin-top: -24px;
+    width: 60px;
+    height: 35px;
+    background: rgba(240, 242, 245, 1);
+    border-radius: 3px;
+    border: 1px solid rgba(215, 219, 224, 1);
+}
+.selectItem {
+    margin: 24px 18px 0 0;
+    width: 240px;
+}
+
+.confirm {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    width: 1243px;
+    height: 78px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px -3px 6px 0px rgba(0, 0, 0, 0.06);
+}
+.confirmBtn {
+    align-self: center;
+    margin: 0 auto;
+    width: 196px;
+    height: 42px;
+    background: rgba(45, 110, 255, 1);
+    border-radius: 3px;
+}
+.goodsFooter {
+    margin: 0 24px;
+    display: flex;
+    justify-content: flex-end;
+    height: 84px;
+}
+.pagination {
+    display: flex;
+    align-self: center;
+    font-size: 12px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: rgba(51, 51, 51, 1);
+    line-height: 17px;
+}

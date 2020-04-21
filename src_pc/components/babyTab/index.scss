@@ -1,0 +1,23 @@
+.tab {
+    display: flex;
+    margin-left: 25.26px;
+    width: 711px;
+    height: 36px;
+}
+.tabItem {
+    width: 70px;
+    height: 36px;
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: rgba(51, 51, 51, 1);
+}
+.active {
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: rgba(45, 110, 255, 1);
+    border-bottom: 2px solid rgba(45, 110, 255, 1);
+}
+.right {
+    margin-left: 130px;
+}
