@@ -10,13 +10,13 @@ class MyTab extends Component {
         return (
             <View className="tab">
                 <View
-                    className={"tabItem" + " " + (tab ? "active" : "")}
+                    className={"tabItem " + (tab && "active")}
                     onClick={onClick.bind(this, "goods")}
                 >
                     按宝贝选择
                 </View>
                 <View
-                    className={"tabItem right" + " " + (tab ? "" : "active")}
+                    className={"tabItem right" + " " + (!tab && "active")}
                     onClick={onClick.bind(this, "classify")}
                 >
                     按分类选择

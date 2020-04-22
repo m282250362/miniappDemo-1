@@ -34,9 +34,9 @@ class MyTable extends Component {
                         <Text>库存</Text>
                         <Text
                             class={
-                                "iconfont icon-icon-test asc" +
+                                "iconfont icon-icon-test asc " +
                                 " " +
-                                (orderBy === "num:asc" ? "orderBy" : " ")
+                                (orderBy === "num:asc" && "orderBy")
                             }
                             onClick={onOrderByChange.bind(this, "num:asc")}
                         ></Text>
@@ -44,7 +44,7 @@ class MyTable extends Component {
                             class={
                                 "iconfont icon-icon-test1 desc" +
                                 " " +
-                                (orderBy === "num:desc" ? "orderBy" : " ")
+                                (orderBy === "num:desc" && "orderBy")
                             }
                             onClick={onOrderByChange.bind(this, "num:desc")}
                         ></Text>
@@ -55,9 +55,7 @@ class MyTable extends Component {
                             class={
                                 "iconfont icon-icon-test asc" +
                                 " " +
-                                (orderBy === "sold_quantity:asc"
-                                    ? "orderBy"
-                                    : " ")
+                                (orderBy === "sold_quantity:asc" && "orderBy")
                             }
                             onClick={onOrderByChange.bind(
                                 this,
@@ -68,9 +66,7 @@ class MyTable extends Component {
                             class={
                                 "iconfont icon-icon-test1 desc" +
                                 " " +
-                                (orderBy === "sold_quantity:desc"
-                                    ? "orderBy"
-                                    : " ")
+                                (orderBy === "sold_quantity:desc" && "orderBy")
                             }
                             onClick={onOrderByChange.bind(
                                 this,
@@ -80,46 +76,48 @@ class MyTable extends Component {
                     </View>
                 </View>
                 <View className="tableContent">
-                    {babyList.map(v => {
+                    {babyList.map(item => {
                         return (
-                            <View className="tableRow" key={v.num_iid}>
+                            <View className="tableRow" key={item.num_iid}>
                                 <View className="selectAll">
                                     <Checkbox
-                                        checked={v.checked}
+                                        checked={item.checked}
                                         onChange={onCheckedChange.bind(
                                             this,
-                                            v.num_iid
+                                            item.num_iid
                                         )}
                                     ></Checkbox>
                                 </View>
                                 <View className="goodsInfo">
                                     <View className="goodsImg">
                                         <image
-                                            src={v.pic_url}
+                                            src={item.pic_url}
                                             className="goodsImg"
                                         />
                                     </View>
                                     <View className="goodsTitle">
-                                        {v.title}
+                                        {item.title}
                                     </View>
                                 </View>
-                                <View className="goodsPrice">¥{v.price}</View>
-                                <View className="goodsInventory">{v.num}</View>
+                                <View className="goodsPrice">
+                                    ¥{item.price}
+                                </View>
+                                <View className="goodsInventory">
+                                    {item.num}
+                                </View>
                                 <View className="goodsSale">
-                                    {v.sold_quantity}
+                                    {item.sold_quantity}
                                 </View>
                             </View>
                         );
                     })}
                     {/* 当搜索不到时展示的页面信息 */}
-                    <View
-                        className={
-                            "notFind" + " " + (notFind ? "" : "hiddenNotFind")
-                        }
-                    >
-                        <View>图标</View>
-                        <Text>未找到符合条件的宝贝</Text>
-                    </View>
+                    {notFind && (
+                        <View className="notFind ">
+                            <View>标题</View>
+                            <Text>未找到符合条件的宝贝</Text>
+                        </View>
+                    )}
                 </View>
             </View>
         );
